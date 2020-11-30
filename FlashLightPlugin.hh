@@ -30,7 +30,7 @@ namespace gazebo
     public: virtual void InitPubLight(
       const transport::PublisherPtr &_pubLight) final;
 
-                          lights.
+                          
     public:
       virtual void UpdateLightInEnv(const common::Time &_currentTime) final;
 
