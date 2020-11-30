@@ -63,7 +63,6 @@ First we need to create a LED model.Place this under models folder with a led_se
 </sdf>
 
 Add this model to the tankbot by
-
 <include>
       <uri>model://led_sensor</uri>
       <pose>
@@ -76,13 +75,15 @@ Add this model to the tankbot by
       <child>led_sensor::link</child>
       <parent>chassis</parent>
     </joint>
+
+
     
-    The methods
+   The methods
     
-    flash() -> Used to increase the brightness of the LED
-    dim() -> Used to decrease the brightness of the LED
-    color -> This is set by the constructor of the class.(White is set as default in the code).
+   flash() -> Used to increase the brightness of the LED
+   dim() -> Used to decrease the brightness of the LED
+   color -> This is set by the constructor of the class.(White is set as default in the code).
     
-    Depeneding on the object detected the color can be specifed as a triplet of RGB values(R,G,B) or as specific color words(eg White,Red etc).
+   Depeneding on the object detected the color can be specifed as a triplet of RGB values(R,G,B) or as specific color words(eg White,Red etc).
     
     
