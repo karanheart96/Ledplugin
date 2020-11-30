@@ -102,3 +102,5 @@ Flashlight references : http://gazebosim.org/tutorials?tut=flashlight_plugin&cat
 Call the required methods from the brain class to control LED characteristics.
 
 LedPlugin.hh is provided to change the signature if user preferred.
+
+FlashLightPlugin.hh is provided to support more functionalities and also to handle multiple LED's synchronously.
