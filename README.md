@@ -96,3 +96,4 @@ Add this model to the tankbot by
    The LED can be made in any regualar shapes with spot being used in this model
 
 LED references : http://gazebosim.org/tutorials?tut=led_plugin&cat=plugins
+Flashlight references : http://gazebosim.org/tutorials?tut=flashlight_plugin&cat=plugins
