@@ -9,7 +9,7 @@
 #include "gazebo/msgs/msgs.hh"
 #include "gazebo/physics/physics.hh"
 #include "gazebo/transport/transport.hh"
-#include "plugins/LedPlugin.hh"
+#include "LedPlugin.hh"
 
 using physics::ModelPtr;
 using std::string;
