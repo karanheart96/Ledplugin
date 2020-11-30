@@ -89,7 +89,7 @@ Add this model to the tankbot by
    
    dim() -> Used to decrease the brightness of the LED
    
-   color -> This is set by the constructor of the class.(White is set as default in the code).
+   SetColor() -> This is set by the constructor of the class.(White is set as default in the code).
     
    Depeneding on the object detected the color can be specifed as a triplet of RGB values(R,G,B) or as specific color words(eg White,Red etc).
     
