@@ -104,3 +104,5 @@ Call the required methods from the brain class to control LED characteristics.
 LedPlugin.hh is provided to change the signature if user preferred.
 
 FlashLightPlugin.hh is provided to support more functionalities and also to handle multiple LED's synchronously.
+
+The LedPlugin inherits the flashlightplugin and implents few methods but can be made to extend other functionalities too.
