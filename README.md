@@ -94,3 +94,5 @@ Add this model to the tankbot by
    Depeneding on the object detected the color can be specifed as a triplet of RGB values(R,G,B) or as specific color words(eg White,Red etc).
     
    The LED can be made in any regualar shapes with spot being used in this model
+
+LED references : http://gazebosim.org/tutorials?tut=led_plugin&cat=plugins
