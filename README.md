@@ -6,9 +6,13 @@ The plugin is used to attach a LED to a mbot and control it's parameters.
 We can 
 
 1)Change the color of the LED.
+
 2)Adjust the duraion of the LED flash time.
+
 3)Make the LED appear brighter.
+
 4)Make the LED appear dim.
+
 5)Send a message when a visual object is identified.
 
 First we need to create a LED model.Place this under models folder with a led_sensor model.
