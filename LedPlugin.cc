@@ -11,9 +11,10 @@
 #include "gazebo/transport/transport.hh"
 #include "LedPlugin.hh"
 
+
+using namespace gazebo;
 using physics::ModelPtr;
 using std::string;
-using namespace gazebo;
 using physics::JointControllerPtr;
 using ignition::math::Pose3d;
 using common::Time;
@@ -51,12 +52,11 @@ namespace gazebo
     public: transport::NodePtr node;
     public: transport::PublisherPtr pubVisual;
     public: physics::ModelPtr model;
-    public: transport::NodePtr node;
     public: transport::SubscriberPtr vel_sub;
     public: transport::SubscriberPtr stat_sub;
     public: transport::PublisherPtr  led_pub;
 
-    LedControlPlugin() {}
+    LedPluginPrivate() {}
 
 
     virtual void
@@ -83,15 +83,22 @@ namespace gazebo
 
         string stats_topic = "~/world_stats";
         this->stat_sub = this->node->Subscribe(
-            stats_topic, &LedControlPlugin::OnStats, this);
+            stats_topic, &LedPluginPrivate::OnStats, this);
         std::cerr << "Subscribed world_stats: "
                   << this->stat_sub->GetTopic() << std::endl;
 
         string pose_topic = "~/" + model_name + "/led";
-        this->pose_pub = this->node->Advertise<msgs::PoseStamped>(pose_topic, 50);
+        this->led_pub = this->node->Advertise<msgs::PoseStamped>(pose_topic, 50);
         std::cerr << "Advertised pose" << std::endl;
 
         std::cerr << "Led plugin loaded" << std::endl;
+    }
+    
+    void
+    OnStats(ConstAnyPtr &_msg)
+    {
+        gazebo::msgs::Int msg;
+        this->led_pub->Publish(msg);
     }
   };
 }
@@ -212,7 +219,7 @@ void LedSetting::Dim()
   }
 }
 
-void FlashLightSetting::SetColor(const ignition::math::Color &_color)
+void FlashLightSetting::SetColor(const ignition::math::Color &_color) 
 {
   
   FlashLightSetting::SetColor(ignition::math::Color &_color);
