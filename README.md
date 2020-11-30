@@ -98,3 +98,5 @@ Add this model to the tankbot by
 LED references : http://gazebosim.org/tutorials?tut=led_plugin&cat=plugins
 
 Flashlight references : http://gazebosim.org/tutorials?tut=flashlight_plugin&cat=plugins
+
+Call the required methods from the brain class to control LED characteristics.
